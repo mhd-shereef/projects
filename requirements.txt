@@ -1,8 +1,4 @@
-numpy
-matplotlib
-seaborn
+streamlit
 pandas
-tensorflow
 scikit-learn
 joblib
-streamlit
