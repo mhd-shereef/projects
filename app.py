@@ -22,7 +22,7 @@ with st.sidebar:
     with st.expander("**What this website does**", expanded=True):
         st.markdown("""
         This is a **Customer Churn Predictor** for telecom/service customers.  
-        You enter a customer’s profile (demographics, services, contract, charges),  
+        You enter a customer's profile (demographics, services, contract, charges),  
         and the app predicts the **probability they will churn** (leave the company).  
         Results are shown as **Low / Medium / High risk** with a percentage.
         """)
@@ -40,7 +40,7 @@ with st.sidebar:
         st.markdown("""
         The inputs mirror a **telecom/cable-style customer dataset**:
         - **Demographics** — Gender, senior citizen, partner, dependents (from customer records).
-        - **Tenure** — How long they’ve been with the company (months).
+        - **Tenure** — How long they've been with the company (months).
         - **Services** — Phone, internet, multiple lines, streaming TV/movies, security, backup, device protection, tech support (from product/subscription data).
         - **Billing** — Contract type, paperless billing, payment method, monthly and total charges (from billing systems).
         The model was trained on a customer churn dataset with these same kinds of features.
