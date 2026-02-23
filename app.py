@@ -56,7 +56,6 @@ with st.sidebar:
         """)
 
 st.title("📞 Customer Churn Predictor")
-st.text("Using Different Features to predict the likely of the customer")
 # ===============================
 # 2. USER INPUTS
 # ===============================
