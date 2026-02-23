@@ -11,6 +11,50 @@ ohe_gen = joblib.load('ohe_general.pkl')
 ohe_pay = joblib.load('ohe_payment.pkl')
 
 st.set_page_config(page_title="Customer Churn Predictor", layout="wide")
+
+# ===============================
+# SIDEBAR — About & context
+# ===============================
+with st.sidebar:
+    st.markdown("## 📖 About this app")
+    st.markdown("---")
+
+    with st.expander("**What this website does**", expanded=True):
+        st.markdown("""
+        This is a **Customer Churn Predictor** for telecom/service customers.  
+        You enter a customer’s profile (demographics, services, contract, charges),  
+        and the app predicts the **probability they will churn** (leave the company).  
+        Results are shown as **Low / Medium / High risk** with a percentage.
+        """)
+
+    with st.expander("**Use cases**"):
+        st.markdown("""
+        - **Retention teams** — Find high-risk customers and target them with offers or support.
+        - **Sales & support** — Prioritize calls and interventions by churn risk.
+        - **Marketing** — Design campaigns for at-risk segments (e.g. month-to-month, high charges).
+        - **Product** — See which services (e.g. no tech support, no contract) correlate with churn.
+        - **Executives** — Track and reduce churn rate using data-driven predictions.
+        """)
+
+    with st.expander("**Where the features come from**"):
+        st.markdown("""
+        The inputs mirror a **telecom/cable-style customer dataset**:
+        - **Demographics** — Gender, senior citizen, partner, dependents (from customer records).
+        - **Tenure** — How long they’ve been with the company (months).
+        - **Services** — Phone, internet, multiple lines, streaming TV/movies, security, backup, device protection, tech support (from product/subscription data).
+        - **Billing** — Contract type, paperless billing, payment method, monthly and total charges (from billing systems).
+        The model was trained on a customer churn dataset with these same kinds of features.
+        """)
+
+    with st.expander("**Why customer churn matters**"):
+        st.markdown("""
+        - **Revenue** — Losing a customer means lost recurring revenue and often higher cost to win a new one.
+        - **Cost** — Acquiring a new customer is typically 5–7× more expensive than keeping an existing one.
+        - **Growth** — High churn makes it harder to grow; reducing churn directly improves retention and LTV.
+        - **Signals** — Churn risk highlights product, pricing, or service issues before customers leave.
+        Predicting churn lets the business act in time (offers, support, pricing) instead of reacting after loss.
+        """)
+
 st.title("📞 Customer Churn Predictor")
 st.text("Using Different Features to predict the likely of the customer")
 # ===============================
